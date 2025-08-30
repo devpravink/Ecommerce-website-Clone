@@ -1,12 +1,55 @@
 *{
     margin: 0;
-    
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body{
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
 }
+
 code{
     font-family: source-code-pro, Menlo, Monlo, Monaco, Consolas, 'Courier New monospace';
 }
+
+/* Responsive utilities */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Mobile-first responsive breakpoints */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* Hide elements on mobile */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+/* Show elements only on mobile */
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+
+/* Import responsive utilities */
+@import './responsive.css';
